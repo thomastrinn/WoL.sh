@@ -60,12 +60,12 @@ else
         targetport=9
     else
         targetip="255.255.255.255"
-        targetport=""
+        targetport=9
     fi
     
     # Send magic packet
-    printf "Sending magic packet..." 
+    printf "Sending magic packet...\n" 
     echo -e $magicpacket | nc -w1 -u $targetip $targetport
-    printf " Done!"
+    printf "Done!\n"
     
 fi
