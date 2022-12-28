@@ -24,6 +24,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+command -v nc >/dev/null 2>&1 || {
+  echo >&2 "NetCat required! Aborting.";
+  exit 1;
+}
+
+command -v sed >/dev/null 2>&1 || {
+  echo >&2 "Sed required! Aborting.";
+  exit 1;
+}
+
 if [ $# -le 0 ]; then
 # Display help if no arguments
 printf "Wake-On-LAN Utility
@@ -39,7 +49,7 @@ This utility sends a magic packet to wake up a machine properly configured to li
            
    Port:   optional, the magic packet will be sent to this port
            default: 9
-   "
+   \n"
 else
     
     # Remove separators from MAC address input
