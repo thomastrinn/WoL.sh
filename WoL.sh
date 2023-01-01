@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # WoL.sh
 # Project homepage: https://leesteve.tk/wol.sh
 # Version 0.1 (20200302) (Pre-release)
